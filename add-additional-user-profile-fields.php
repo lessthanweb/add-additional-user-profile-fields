@@ -59,6 +59,7 @@ function lessthanweb_display_extra_profile_fields( $user ) {
     <?php
 }
 add_action( 'show_user_profile', 'lessthanweb_display_extra_profile_fields' );
+add_action( 'edit_user_profile', 'lessthanweb_display_extra_profile_fields' );
 
 /**
  * Save information in the extra profile fields to user meta.
@@ -86,5 +87,3 @@ function lessthanweb_save_extra_profile_fields( $user_id ) {
 }
 add_action( 'personal_options_update', 'lessthanweb_save_extra_profile_fields' );
 add_action( 'edit_user_profile_update', 'lessthanweb_save_extra_profile_fields' );
-
-add_action( 'edit_user_profile', 'lessthanweb_display_extra_profile_fields' );
